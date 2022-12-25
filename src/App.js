@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import records from './records.json';
 
-function App() {
-  return (
+function App(){
+  
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h3>Fetch</h3>
+    <ul>
+    {records.map(
+      record =>(
+        <li>{record.name}  {record.email}</li>  
+      )
+    )
+    }
+    </ul>
     </div>
-  );
+    );
+    
 }
 
 export default App;
